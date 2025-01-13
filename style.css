@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('https://img.freepik.com/premium-vector/modern-dark-abstract-background-with-red-light_55870-87.jpg?semt=ais_hybrid.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  
+  .game-container {
+    text-align: center;
+  }
+  
+  h1 {
+    margin-bottom: 10px;
+    font-size: 50px;
+    color: white;
+  }
+  
+  .mode-selection {
+    position: relative;
+  }
+  
+  .mode-selection #multiplayer-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+  .mode-selection #ai-btn {
+    background-color:gray;
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .mode-selection button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .mode-indicator {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+  }
+  .indicator1{
+    width: 170px;
+    height: 4px;
+    margin: 0 5px;
+    background-color: transparent;
+    transition: background-color 0.3s;
+  }
+  
+  .indicator2{
+    width: 120px;
+    height: 4px;
+    margin: 0 5px;
+    background-color: transparent;
+    transition: background-color 0.3s;
+  }
+  
+  #multiplayer-indicator.active {
+      background-color: red;
+  }
+  
+  #ai-indicator.active {
+    background-color:gray;
+  /*  margin-left: 50px;*/
+  }
+  
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 5px;
+    margin: 10px auto;    
+  }
+  
+  .cell {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border: 2px solid brown;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .cell.taken {
+    pointer-events: none;
+    color: #333;
+  }
+  
+  .result {
+    margin-top: 10px;
+    display: none;
+  }
+  .result p{
+    color: white;
+    font-size: 20px;
+  }
+  
+  #restart-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: green;
+    border: none;
+    color: #f4f4f9;
+    border-radius: 5px;
+  }
